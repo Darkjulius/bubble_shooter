@@ -8,7 +8,7 @@
 
 body {
   cursor: crosshair;
-  overflow: hidden; /* Masqué toutes les bulles qui iront hors de l'écran */
+  overflow: hidden; /* Masquer toutes les bulles qui iront hors de l'écran */
   min-height: 100vh;
 }
 
