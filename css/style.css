@@ -1,0 +1,38 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  cursor: crosshair;
+  overflow: hidden; /* Masqué toutes les bulles qui iront hors de l'écran */
+  min-height: 100vh;
+}
+
+span {
+  color: rgba(128, 128, 128, 0.5);
+  font-size: 10rem;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.bubble {
+  animation: anim 8s forwards;
+  background-color: rgba(1255, 166, 0, 0.6);
+  border-radius: 50%;
+  filter: hue-rotate(0deg); /* Roue chromatique démarre à 0 degrés */
+  opacity: 0;
+  position: absolute;
+}
+
+@keyframes anim {
+  to {
+    filter: hue-rotate(720deg); /* Roue chromatique fait 2 tours */
+    left: var(--left);
+    opacity: 1;
+    top: -250px;
+  }
+}
